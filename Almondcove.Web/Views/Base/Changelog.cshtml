@@ -1,0 +1,91 @@
+﻿@using Laymaann.Entities.ViewModels.Props
+@{
+    HTMLProps props = new()
+        {
+             DataBsTheme = "",
+        };
+
+    MetaProps meta = new()
+            {
+                Title = "About | Laymaann",
+                Description = "A dynamic webspace for blogs, gallery, apps, web resources and much more",
+                Author = "Jasmeet Singh"
+            };
+
+    ViewData["HtmlProps"] = props;
+    ViewData["MetaProps"] = meta;
+}
+
+
+<!-- About -->
+<section class="container pt-5 mt-lg-3 mt-xl-4 mt-xxl-5">
+    <div class="row g-4 pt-2 pt-sm-3 pt-md-4 pt-xl-5 mt-sm-2 mt-md-3 mt-xl-0">
+        <div class="col-sm-6 col-lg-4">
+            <h2 class="display-2">About us</h2>
+            <p class="fs-xl mb-0">These unique macarons have their roots in a love for baking, creative craftsmanship, and a quest for perfection.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <img class="rounded-5" src="assets/img/landing/shop-2/gallery/01.jpg" alt="Image">
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <img class="rounded-5" src="assets/img/landing/shop-2/gallery/02.jpg" alt="Image">
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <img class="rounded-5" src="assets/img/landing/shop-2/gallery/03.jpg" alt="Image">
+        </div>
+        <div class="col-sm-6 col-lg-4 d-flex align-items-center">
+            <p class="fs-xl text-center mb-0">In recent years, we've dedicated ourselves to perfecting macarons, creating surprising flavors. Our macarons are made with love to provide an exceptional experience.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <img class="rounded-5" src="assets/img/landing/shop-2/gallery/04.jpg" alt="Image">
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <img class="rounded-5" src="assets/img/landing/shop-2/gallery/05.jpg" alt="Image">
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-2 mb-lg-0">
+            <img class="rounded-5" src="assets/img/landing/shop-2/gallery/06.jpg" alt="Image">
+        </div>
+        <div class="col-lg-4 d-flex justify-content-center align-items-center">
+            <div class="text-center px-xl-3 px-xxl-5">
+                <h3 class="h2 mb-4">All of our Macarons are gluten-free.</h3>
+                <a class="btn btn-dark rounded-pill" href="#">Explore our collection</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Awards -->
+<section class="container py-5 my-md-2 my-lg-4 my-xl-5">
+    <div class="overflow-auto" data-simplebar>
+        <div class="row row-cols-4 g-0 py-3 my-sm-3" style="min-width: 600px;">
+            <div class="col">
+                <img class="d-block mx-auto" src="assets/img/landing/shop-2/awards/01.png" width="226" alt="Award">
+            </div>
+            <div class="col">
+                <img class="d-block mx-auto" src="assets/img/landing/shop-2/awards/02.png" width="226" alt="Award">
+            </div>
+            <div class="col">
+                <img class="d-block d-dark-mode-none mx-auto" src="assets/img/landing/shop-2/awards/03-light.png" width="226" alt="Award">
+                <img class="d-none d-dark-mode-block mx-auto" src="assets/img/landing/shop-2/awards/03-dark.png" width="226" alt="Award">
+            </div>
+            <div class="col">
+                <img class="d-block mx-auto" src="assets/img/landing/shop-2/awards/04.png" width="226" alt="Award">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Custom box CTA -->
+<section class="py-5 bg-size-cover bg-position-center" style="background-image: url(assets/img/landing/shop-2/cta-bg.jpg);">
+    <div class="container py-md-3 py-lg-5 my-xl-3 my-xxl-5">
+        <div class="row pt-2 pb-3 py-sm-4 py-md-5">
+            <div class="col-9 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                <h2 class="h1 mb-md-4" data-bs-theme="light">Craft Your Custom Macaron Collection</h2>
+                <p class="fs-lg text-dark opacity-70 pb-3 pb-sm-4 mb-3" data-bs-theme="light">Indecisive about our delightful flavors? Craft your custom box with your favorites. Enjoy it alone or share with others—it's all up to you!</p>
+                <a class="btn btn-dark rounded-pill" href="#" data-bs-theme="light">Create your own box</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "faq1",
+    "question": "What is AlmondCove?",
+    "answer": "AlmondCove is a platform where I share blogs, music, web resources ,tools ,opinions"
+  },
+  {
+    "id": "faq2",
+    "question": "How can I contact you?",
+    "answer": "You can contact me through the contact form on the website."
+  },
+  {
+    "id": "faq3",
+    "question": "Why can't i access certain sections of the website?",
+    "answer": "Sections that are faded or inaccessible are member only you need to make an account to acesss those."
+  }
+]

@@ -1,0 +1,117 @@
+﻿@using Laymaann.Entities.ViewModels.Props
+@{
+    HTMLProps props = new()
+        {
+             DataBsTheme = "",
+        };
+
+    MetaProps meta = new()
+            {
+                Title = "About | Laymaann",
+                Description = "A dynamic webspace for blogs, gallery, apps, web resources and much more",
+                Author = "Jasmeet Singh"
+            };
+
+    ViewData["HtmlProps"] = props;
+    ViewData["MetaProps"] = meta;
+}
+
+     <section class="container overflow-hidden py-5 my-md-3 my-lg-2 my-xl-4 my-xxl-5">
+        <div class="row align-items-center my-2 py-2 py-sm-4 py-lg-5 my-xxl-2">
+          <div class="col-md-5 text-center text-md-start pe-md-5 pe-lg-0 pe-xxl-4 ps-xl-5 mb-5 mb-md-0">
+            <h2 class="h1 pb-3 pb-xl-2 mb-lg-4 mb-xl-5">Join Around with your favorite tools that you use daily and keep things on track</h2>
+            <a class="btn btn-outline-primary rounded-pill" href="#">See all integrations</a>
+          </div>
+          <div class="col-md-7 col-lg-6 offset-lg-1">
+            <div class="position-relative mx-auto" style="max-width: 510px;">
+              <img class="d-block d-dark-mode-none" src="assets/img/landing/saas-2/tools/circle-gray-1.png" style="animation: rotate-cw 100s linear infinite;" alt="Circle">
+              <img class="d-none d-dark-mode-block" src="assets/img/landing/saas-2/tools/circle-light-1.png" style="animation: rotate-cw 100s linear infinite;" alt="Circle">
+              <img class="d-block d-dark-mode-none position-absolute top-0 start-0" src="assets/img/landing/saas-2/tools/circle-gray-2.png" style="animation: rotate-ccw 50s linear infinite;" alt="Circle">
+              <img class="d-none d-dark-mode-block position-absolute top-0 start-0" src="assets/img/landing/saas-2/tools/circle-light-2.png" style="animation: rotate-ccw 50s linear infinite;" alt="Circle">
+              <img class="position-absolute top-0 start-0 z-2" src="assets/img/landing/saas-2/tools/icon-1.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="1200" alt="Icon">
+              <img class="position-absolute top-0 start-0 z-2" src="assets/img/landing/saas-2/tools/icon-2.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="450" alt="Icon">
+              <img class="position-absolute top-0 start-0 z-2" src="assets/img/landing/saas-2/tools/icon-3.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="600" alt="Icon">
+              <img class="position-absolute top-0 start-0 z-2" src="assets/img/landing/saas-2/tools/icon-4.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="750" alt="Icon">
+              <img class="position-absolute top-0 start-0 z-2" src="assets/img/landing/saas-2/tools/icon-5.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="900" alt="Icon">
+              <img class="position-absolute top-0 start-0 z-2" src="assets/img/landing/saas-2/tools/icon-6.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="1050" alt="Icon">
+              <img class="position-absolute top-0 start-0 z-2" src="assets/img/landing/saas-2/tools/icon-7.png" data-aos="zoom-in" data-aos-duration="600" data-aos-offset="250" alt="Icon">
+              <img class="position-absolute top-0 start-0 z-2" src="assets/img/landing/saas-2/tools/icon-8.png" data-aos="zoom-in" data-aos-duration="600" data-aos-offset="250" data-aos-delay="150" alt="Icon">
+              <img class="position-absolute top-0 start-0 z-2" src="assets/img/landing/saas-2/tools/icon-9.png" data-aos="zoom-in" data-aos-duration="600" data-aos-offset="250" data-aos-delay="300" alt="Icon">
+            </div>
+          </div>
+        </div>
+      </section>
+        <!-- Lists: Unordered and ordered -->
+          <section class="container card border-0 mb-4" id="type-lists">
+            <div class="card-body pb-0">
+              <h2 class="h4 mb-n2">Lists: Unordered and ordered</h2>
+            </div>
+             <form method="post">
+                <a class=" btn-icon btn btn-primary w-100" asp-controller="Auth" asp-action="Login">
+                    <i class="ai-google fs-xl me-2"></i>
+                    Google
+                </a>
+            </form>
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs flex-nowrap align-items-center mb-n1" role="tablist">
+                <li class="nav-item me-3">
+                  <a class="nav-link px-0 py-2 border-0 rounded-1 active" href="#preview7" data-bs-toggle="tab" role="tab" aria-controls="preview7" aria-selected="true">
+                    <i class="ai-show fs-lg opacity-90 me-2"></i>
+                    Preview
+                  </a>
+                </li>
+                <li class="vr opacity-20 my-3 me-3"></li>
+                <li class="nav-item">
+                  <a class="nav-link px-0 py-2 border-0 rounded-1" href="#html7" data-bs-toggle="tab" role="tab" aria-controls="html7" aria-selected="false">
+                    <i class="ai-code fs-xl opacity-90 me-2"></i>
+                    HTML
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="preview7" role="tabpanel">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <ul>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipiscing elit</li>
+                        <li>Integer molestie lorem at massa</li>
+                        <li>Facilisis in pretium nisl aliquet</li>
+                        <li>Nulla volutpat aliquam velit</li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-6">
+                      <ol>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipiscing elit</li>
+                        <li>Integer molestie lorem at massa</li>
+                        <li>Facilisis in pretium nisl aliquet</li>
+                        <li>Nulla volutpat aliquam velit</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="html7" role="tabpanel">
+                  <pre class="line-numbers"><code class="lang-html">&lt;!-- Unordered list --&gt;
+                    &lt;ul&gt;
+                      &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+                      &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+                      &lt;li&gt;Integer molestie lorem at massa&lt;/li&gt;
+                      &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+                      &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
+                    &lt;/ul&gt;
+
+                    &lt;!-- Ordered list --&gt;
+                    &lt;ol&gt;
+                      &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+                      &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+                      &lt;li&gt;Integer molestie lorem at massa&lt;/li&gt;
+                      &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+                      &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
+                    &lt;/ul&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+          </section>

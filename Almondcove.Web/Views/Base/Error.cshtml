@@ -1,0 +1,32 @@
+﻿@using Laymaann.Entities.ViewModels.Props
+@{
+    HTMLProps props = new()
+        {
+             DataBsTheme = "",
+        };
+
+    MetaProps meta = new()
+            {
+                Title = "Error",
+                Description = "A dynamic webspace for blogs, gallery, apps, web resources and much more",
+                Author = "Jasmeet Singh"
+            };
+
+    ViewData["HtmlProps"] = props;
+    ViewData["MetaProps"] = meta;
+}
+
+
+<!-- New arrival (Carousel) -->
+<section class="container pt-5 mt-md-2 mt-lg-4 mt-xl-5">
+    <div class="row">
+
+        <!-- Text -->
+        <div class="col-lg-3 pb-3 mb-3 mb-md-4">
+            <h2 class="h1 mt-n2 mt-lg-0 mb-2 mb-lg-4">OOPSIE</h2>
+            <p class="fs-lg mb-4">Something went wrong.</p>
+            <a class="btn btn-dark rounded-pill" href="#">Shop boxes</a>
+        </div>
+    </div>
+</section>
+

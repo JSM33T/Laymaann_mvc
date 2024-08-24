@@ -1,0 +1,10 @@
+{
+  "responses": {
+    "start": "Welcome to Laymaann, ##firstName##! Try:\n/web\n/account\n/channel\n/myid\nWeb: [Login/Signup](https://almondcove.in/login)\nHappy browsing!✨",
+    "web": "Join with us at ##website##",
+    "channel": "Join our channel ##channelName##",
+    "myid": "Hi, your ID is ##userId##",
+    "account": "This feature is under development",
+    "whoami": "Your details(Beta):\nID: ##userId##\nUsername: ##username##\nFirst Name: ##firstName##\nLast Name: ##lastName##"
+  }
+}

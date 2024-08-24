@@ -1,0 +1,85 @@
+﻿@using Laymaann.Entities.ViewModels.Auth
+@using Laymaann.Entities.ViewModels.Props
+@using System.Security.Claims
+@{
+	HTMLProps props = new()
+		{
+			 DataBsTheme = "",
+		};
+
+	MetaProps meta = new()
+			{
+				Title = "Contact | Laymaann",
+				Description = "Contact: Reach out for feature,ideas,collaborations and suggestions",
+				Author = "Jasmeet Singh"
+			};
+
+	ViewData["HtmlProps"] = props;
+	ViewData["MetaProps"] = meta;
+
+	//var userClaims = ViewData["UserClaims"] as UserClaims;
+	var userClaims = new UserClaims(User.Claims.ToList());
+	var Visibility = "";
+	if (userClaims!= null && userClaims?.Role != "guest")
+	{
+		Visibility = "disabled";
+	}
+}
+
+
+
+@section JS{
+<script type="module" src="~/scripts/dedicated/contact.js"></script>
+}
+
+<section class="container pt-5 pb-lg-2 pb-xl-4 py-xxl-5 my-5">
+
+	<!-- Breadcrumb-->
+	<nav aria-label="breadcrumb">
+		<ol class="pt-lg-3 pb-lg-4 pb-2 breadcrumb">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Contact</li>
+		</ol>
+	</nav>
+
+	<div class="row pb-1 pb-sm-3 pb-lg-4">
+		<div class="col-lg-4 pe-xxl-4">
+			<h1 class="display-2">Contact</h1>
+			<p class="fs-lg pb-4 mb-0 mb-sm-2">Get in touch, provide your suggestions/feedback</p>
+		</div>
+		<div class="col-lg-8 col-xl-7 offset-xl-1">
+
+			<!-- Contact form -->
+			<form class="row g-4" id="frmContact" novalidate>
+				@Html.AntiForgeryToken()
+				<div class="col-sm-6">
+					<label class="form-label fs-base" for="name">Name</label>
+					<input class="form-control form-control-lg" value="@userClaims?.UserName" type="text" placeholder="Your name" required id="ipName" @Visibility>
+					<div class="invalid-feedback">Please enter your name!</div>
+				</div>
+				<div class="col-sm-6">
+					<label class="form-label fs-base" for="email">Email</label>
+					<input class="form-control form-control-lg" value="@userClaims?.Email" type="email" placeholder="Email address" required id="ipEmail" @Visibility>
+					<div class="invalid-feedback">Please provide a valid email address!</div>
+				</div>
+				<div class="col-sm-12">
+					<label class="form-label fs-base" for="location">Topic</label>
+					<select class="form-select form-select-lg" id="ddlTopic">
+						<option value="general">General</option>
+						<option value="suggestions">Suggestions</option>
+						<option value="report">Report</option>
+						<option value="contribute">Contribute</option>
+					</select>
+				</div>
+				<div class="col-sm-12">
+					<label class="form-label fs-base" for="message">Ssup?</label>
+					<textarea class="form-control form-control-lg" rows="5" placeholder="Enter your message here..." required id="ipMessage"></textarea>
+					<div class="invalid-feedback">Please enter your message!</div>
+				</div>
+				<div class="col-sm-12 pt-2">
+					<button class="btn btn-lg btn-primary" type="submit"><i class="ai-send fs-lg me-2 ms-n1"></i> Send message</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>

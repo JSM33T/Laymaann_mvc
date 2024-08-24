@@ -1,0 +1,66 @@
+﻿@{
+	string isDisabled = string.Empty;
+	string loginText = string.Empty;
+
+	var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "Id");
+	if (userIdClaim != null && !string.IsNullOrEmpty(userIdClaim.Value))
+	{
+		isDisabled = string.Empty;
+		loginText = string.Empty;
+	}
+	else
+	{
+		isDisabled = "disabled";
+		loginText = "Login to send message";
+	}
+}
+﻿<!-- Panel toggle-->
+<a class="position-fixed top-50 bg-light text-dark fw-medium border rounded-pill shadow text-decoration-none"
+	href="#customizer" data-bs-toggle="offcanvas"
+	style="right: -1.75rem; margin-top: -1rem; padding: .25rem .95rem; transform: rotate(-90deg); font-size: calc(var(--ar-body-font-size) * .8125); letter-spacing: .075rem; z-index: 1030;">
+	<i class="ai-message text-primary fs-base me-1 ms-n1"></i>
+	Comment
+</a>
+<!-- Panel body -->
+<div class="offcanvas offcanvas-end" id="customizer" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1">
+	<div class="offcanvas-header border-bottom">
+		<h4 class="offcanvas-title">Laymaann 0.2.0</h4>
+		<button class="btn-close" id="closePanel" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+	<div class="offcanvas-body">
+
+		<div class="d-flex align-items-center mb-3"><i class="ai-align-left text-body-secondary fs-4 me-2"></i>
+			<h5 class="mb-0">Updates <span class="text-body-secondary fs-sm fw-normal">(id)</span></h5>
+			
+		</div>
+		<code><small><span id="userCount"></span>/100 users joined</small></code>
+		<dl class="fs-sm mx-2 text-body-secondary" id="updates-placeholder"></dl>
+		<div class="d-flex align-items-center mb-3">
+			<i class="ai-paint-roll text-body-secondary fs-4 me-2"></i>
+			<h5 class="mb-0">Shortcuts</h5>
+		</div>
+		
+		<button class="btn btn-primary w-100" id="btnShare" type="button" data-bs-toggle="modal"
+			data-bs-target="#shareModal">
+			<i class="ai-code-curly fs-lg me-2 ms-n1"></i>
+			Share
+		</button>
+
+		<div class="d-flex align-items-center mb-3 mt-3">
+			<i class="ai-paint-roll text-body-secondary fs-4 me-2"></i>
+			<h5 class="mb-0">Message</h5>
+		</div>
+	
+		<input id="ipCurrentUrl" class="my-2 form-control" value="" readonly/>
+		<form class="form-floating" id="frmFeedback">
+			<textarea class="form-control" id="ipFeedback" style="height: 120px;"
+				placeholder="Your message"></textarea>
+			<label for="fl-textarea">Your message</label>
+			<div class="form-text">Page wise Feedback : Did you notice a glitch in this page? please do let me know (in development)</div>
+			<button class="btn btn-primary w-100 mt-3 @isDisabled" id="btnSubmutFeedback" type="submit">
+				<i class="ai-send fs-lg me-2 ms-n1"></i>
+				Submit
+			</button>
+		</form>
+	</div>
+</div>

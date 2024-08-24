@@ -1,0 +1,40 @@
+﻿@using Laymaann.Entities.ViewModels.Props
+@{
+    HTMLProps props = new()
+        {
+             DataBsTheme = "",
+        };
+
+    MetaProps meta = new()
+            {
+                Title = "Blogs",
+                Description = "Collection of blogs and stuff",
+                Author = "Jass and Various"
+            };
+
+    ViewData["HtmlProps"] = props;
+    ViewData["MetaProps"] = meta;
+}
+
+
+@section CSS{
+    <style>
+        .rounded-4{
+            border-radius: 18px !important;
+        }
+    </style>
+
+}
+@section CSSLib{
+  
+    <link rel="stylesheet" href="~/assets//vendor/swiper/swiper-bundle.min.css" asp-append-version="true">
+}
+
+@section JSLib{
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+}
+
+@Html.AntiForgeryToken()
+<section class="container pt-5 mt-5">
+    Blog Browser
+</section>

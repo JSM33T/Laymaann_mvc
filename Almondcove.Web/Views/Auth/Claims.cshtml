@@ -1,0 +1,53 @@
+﻿@using Laymaann.Entities.ViewModels.Props
+@model IEnumerable<dynamic>
+@{
+        HTMLProps props = new()
+        {
+             DataBsTheme = "",
+        };
+
+        MetaProps meta = new()
+        {
+            Title = "Login | Laymaann",
+            Description = "A dynamic webspace for blogs, gallery, apps, web resources and much more",
+            Author = "Jasmeet Singh"
+        };
+
+    ViewData["HtmlProps"] = props;
+    ViewData["MetaProps"] = meta;
+    Layout = "_LayoutAuth";
+} 
+
+@section JSLib{
+    <script type="module" src="~/scripts/dedicated/auth/login.js" asp-append-version="true"></script>
+}
+
+<div class="d-lg-flex position-relative h-100">
+    @Html.AntiForgeryToken()
+
+    <a class="text-nav btn btn-icon bg-light border rounded-circle position-absolute top-0 end-0 p-0 mt-3 me-3 mt-sm-4 me-sm-4" href="/" data-bs-toggle="tooltip" data-bs-placement="left" title="Back to home" aria-label="Back to home">
+        <i class="ai-home"></i>
+    </a>
+    <h2>User Claims</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var claim in Model)
+        {
+            <tr>
+                <td>@claim.Type</td>
+                <td>@claim.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+    <!-- Cover image -->
+    <div class="w-50 bg-size-cover bg-repeat-0 bg-position-center" style="background-image: url(/assets/images/covers/login.jpg);"></div>
+</div>

@@ -1,0 +1,55 @@
+﻿@using Laymaann.Entities.ViewModels.Props
+@{
+        HTMLProps props = new()
+        {
+             DataBsTheme = "",
+        };
+
+        MetaProps meta = new()
+        {
+            Title = "Login | Laymaann",
+            Description = "A dynamic webspace for blogs, gallery, apps, web resources and much more",
+            Author = "Jasmeet Singh"
+        };
+
+    ViewData["HtmlProps"] = props;
+    ViewData["MetaProps"] = meta;
+     ViewData["Title"] = "Login";
+    var returnUrl = ViewData["ReturnUrl"] as string ?? "/";
+
+    Layout = "_LayoutAuth";
+} 
+
+@section JSLib{
+    <script type="module" src="~/scripts/dedicated/auth/login.js" asp-append-version="true"></script>
+}
+
+<div class="d-lg-flex position-relative h-100">
+    @Html.AntiForgeryToken()
+    <!-- Home button -->
+    <a class="text-nav btn btn-icon bg-light border rounded-circle position-absolute top-0 end-0 p-0 mt-3 me-3 mt-sm-4 me-sm-4" href="/" data-bs-toggle="tooltip" data-bs-placement="left" title="Back to home" aria-label="Back to home">
+        <i class="ai-home"></i>
+    </a>
+
+    <!-- Sign in form -->
+    <div class="d-flex flex-column align-items-center w-lg-50 h-100 px-3 px-lg-5 pt-5">
+        <div class="w-100 mt-auto" style="max-width: 526px;">
+            <h1>Sign in to Laymaann</h1>
+            <p class="pb-3 mb-3 mb-lg-4">Create an almondcove account for exclusive features.</p>
+
+            <form method="post">
+                <a class=" btn-icon btn btn-primary w-100" asp-controller="Auth" asp-action="Login" asp-route-returnUrl="@returnUrl">
+                    <i class="ai-google fs-xl me-2"></i>
+                    Google
+                </a>
+            </form>
+
+        </div>
+
+        <!-- Copyright -->
+        <p class="nav w-100 fs-sm pt-5 mt-auto mb-5" style="max-width: 526px;"><span class="text-body-secondary">Laymaann</span></p>
+    </div>
+
+    <!-- Cover image -->
+    <div class="w-50 bg-size-cover bg-repeat-0 bg-position-center" style="background-image: url(/assets/images/covers/login.jpg);"></div>
+</div>
