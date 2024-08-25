@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laymaann.Web", "Almondcove.Web\Laymaann.Web.csproj", "{F19BED43-2523-4EF9-A507-FE9EDA3AD55C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laymaann.Web", "Laymaann.Web\Laymaann.Web.csproj", "{F19BED43-2523-4EF9-A507-FE9EDA3AD55C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laymaann.Entities", "Almondcove.Entities\Laymaann.Entities.csproj", "{D6DDA895-DC92-4FA5-9646-7EA5543FD556}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laymaann.Entities", "Laymaann.Entities\Laymaann.Entities.csproj", "{D6DDA895-DC92-4FA5-9646-7EA5543FD556}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laymaann.Repositories", "Almondcove.Repositories\Laymaann.Repositories.csproj", "{7147FBC9-C62D-4ABE-BCBB-462CC74DE2BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laymaann.Repositories", "Laymaann.Repositories\Laymaann.Repositories.csproj", "{7147FBC9-C62D-4ABE-BCBB-462CC74DE2BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
