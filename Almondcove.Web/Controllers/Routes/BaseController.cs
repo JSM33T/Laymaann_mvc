@@ -20,7 +20,10 @@ namespace Laymaann.Web.Controllers.Routes
 		public IActionResult About() => View("Views/Base/About.cshtml");
 
 		[Route("/changelog")]
-		public IActionResult Changelog() => View("Views/Base/Changelog.cshtml");
+		public IActionResult Changelog()
+		{
+			return View("Views/Base/Changelog.cshtml");
+		} 
 
 		[Route("/attributions")]
 		public IActionResult Attributions() => View("Views/Base/Attributions.cshtml");

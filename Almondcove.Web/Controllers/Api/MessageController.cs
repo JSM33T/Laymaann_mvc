@@ -2,14 +2,13 @@
 using Laymaann.Entities.Shared;
 using Laymaann.Entities.ViewModels.Blog;
 using Laymaann.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System.Reflection;
 
 namespace Laymaann.Web.Controllers.Api
 {
-    [Route("api/message")]
+	[Route("api/message")]
     [ApiController]
     public class MessageController : FoundationController
     {
