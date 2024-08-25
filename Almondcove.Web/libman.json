@@ -14,17 +14,13 @@
       "library": "parallax-js@3.1.0",
       "destination": "wwwroot/assets/vendor/parallax-js/",
       "files": [
-        "dist/parallax.js",
         "dist/parallax.min.js",
-        "dist/parallax.min.js.map"
       ]
     },
     {
       "library": "imagesloaded@5.0.0",
       "destination": "wwwroot/assets/vendor/imagesloaded/",
       "files": [
-        "imagesloaded.js",
-        "imagesloaded.min.js",
         "imagesloaded.pkgd.min.js",
         "imagesloaded.pkgd.js"
       ]
@@ -51,69 +47,6 @@
       "files": [
         "dist/axios.min.js.map",
         "dist/axios.min.js"
-      ]
-    },
-    {
-      "library": "prismjs@1.29.0",
-      "destination": "wwwroot/assets/vendor/prismjs/",
-      "files": [
-        "prism.min.js",
-        "themes/prism.min.css"
-      ]
-    },
-    {
-      "provider": "jsdelivr",
-      "library": "lightgallery@2.7.2",
-      "destination": "wwwroot/assets/vendor/lightgallery/",
-      "files": [
-        "lightgallery.min.js",
-        "css/lg-fullscreen.css",
-        "css/lg-comments.min.css",
-        "css/lg-comments.css",
-        "css/lg-autoplay.min.css",
-        "css/lg-autoplay.css",
-        "plugins/autoplay/lg-autoplay.min.js",
-        "plugins/hash/lg-hash.min.js",
-        "plugins/mediumZoom/lg-medium-zoom.min.js",
-        "plugins/pager/lg-pager.min.js",
-        "plugins/fullscreen/lg-fullscreen.min.js",
-        "css/lg-fullscreen.min.css",
-        "css/lg-medium-zoom.css",
-        "css/lg-medium-zoom.min.css",
-        "css/lg-pager.css",
-        "css/lg-pager.min.css",
-        "css/lg-relative-caption.css",
-        "css/lg-relative-caption.min.css",
-        "css/lg-rotate.css",
-        "css/lg-rotate.min.css",
-        "css/lg-share.css",
-        "css/lg-share.min.css",
-        "css/lg-thumbnail.css",
-        "css/lg-thumbnail.min.css",
-        "css/lg-transitions.css",
-        "css/lg-transitions.min.css",
-        "css/lg-video.css",
-        "css/lg-video.min.css",
-        "css/lg-zoom.css",
-        "css/lg-zoom.min.css",
-        "css/lightgallery-bundle.css",
-        "css/lightgallery-bundle.min.css",
-        "css/lightgallery-core.css",
-        "css/lightgallery-core.min.css",
-        "css/lightgallery.css",
-        "css/lightgallery.min.css",
-        "plugins/rotate/lg-rotate.min.js",
-        "plugins/relativeCaption/lg-relative-caption.min.js",
-        "plugins/zoom/lg-zoom.min.js",
-        "plugins/vimeoThumbnail/lg-vimeo-thumbnail.min.js",
-        "plugins/video/lg-video.min.js",
-        "plugins/thumbnail/lg-thumbnail.min.js",
-        "plugins/share/lg-share.min.js",
-        "fonts/lg.svg",
-        "fonts/lg.woff",
-        "fonts/lg.ttf",
-        "fonts/lg.woff2",
-        "images/loading.gif"
       ]
     }
   ]

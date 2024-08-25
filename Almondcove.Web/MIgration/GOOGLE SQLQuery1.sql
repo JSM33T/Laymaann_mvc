@@ -1,4 +1,4 @@
-use almondcove_mvc
+use laymaann_db
 GO
 --=====================================================================
 --tblMessages
@@ -17,7 +17,7 @@ CREATE TABLE [dbo].tblMessages (
     Id          INT PRIMARY KEY,
     UserId      INT,
 	Name		NVARCHAR(512),
-    [Message]   NVARCHAR(512),
+    [Message]   NVARCHAR(512)   not null,
 	Mail		NVARCHAR(512),
 	Topic		NVARCHAR(512),
     Origin      NVARCHAR(256) NOT NULL,

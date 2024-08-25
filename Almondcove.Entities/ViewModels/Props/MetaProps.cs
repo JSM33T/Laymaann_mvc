@@ -18,13 +18,13 @@ namespace Laymaann.Entities.ViewModels.Props
 
         public MetaProps()
         {
-            Title = "AlmondCove";
+            Title = "Laymaann";
             Description = "A webspace for blogs , apps, music and resources";
-            Tags = "AlmondCove, photography,portfolio,apps,blogs,lightroom,presets";
-            Image = "https://almondcove.in/assets/meta/banner.jpg";
-            Url = "https://almondcove.in";
+            Tags = "Laymaann, photography,portfolio,apps,blogs,lightroom,presets";
+            Image = "https://laymaann.in/assets/meta/banner.jpg";
+            Url = "https://laymaann.in";
             Type = "Website";
-            Author = "jsm33t | Jass";
+            Author = "Laymaann | Karan Singh";
         }
 
     }

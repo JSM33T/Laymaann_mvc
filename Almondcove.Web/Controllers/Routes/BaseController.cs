@@ -16,7 +16,6 @@ namespace Laymaann.Web.Controllers.Routes
 		[Route("/")]
 		public IActionResult Index() => View("Views/Base/Index.cshtml");
 
-		[Authorize]
 		[Route("/about")]
 		public IActionResult About() => View("Views/Base/About.cshtml");
 

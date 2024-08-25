@@ -2,6 +2,7 @@
 using Laymaann.Entities.Shared;
 using Laymaann.Entities.ViewModels.Blog;
 using Laymaann.Repositories;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System.Reflection;
@@ -13,10 +14,12 @@ namespace Laymaann.Web.Controllers.Api
     public class MessageController : FoundationController
     {
         private readonly IMessageRepository _messageRepo;
+        private readonly HttpContext _httpContext;
         public MessageController(IOptionsMonitor<LaymaannConfig> config, ILogger<FoundationController> logger,IHttpContextAccessor httpContextAccessor,IMessageRepository messageRepository) 
             : base(config, logger, httpContextAccessor)
         {
             _messageRepo = messageRepository;
+            _httpContext = httpContextAccessor.HttpContext;
         }
 
         [HttpPost("sendfeedback")]
@@ -38,15 +41,29 @@ namespace Laymaann.Web.Controllers.Api
                 if(string.IsNullOrEmpty(userId))
                 {
                     Message = "Unauthorized";
-                    errors.Add("You are not authorized for this actin");
+                    errors.Add("You are not authorized for this action");
                     statCode = StatusCodes.Status401Unauthorized;
                 }
-                var feedbackMessage = new FeedbackMessage
+                if (string.IsNullOrEmpty(feedbackMessageRequest.Message))
+                {
+					Message = "Validation error";
+					errors.Add("Message is required");
+					statCode = StatusCodes.Status400BadRequest;
+				}
+				else if (feedbackMessageRequest.Message.Length <= 3)
+				{
+					Message = "Validation error";
+					errors.Add("Message too short");
+					statCode = StatusCodes.Status400BadRequest;
+				}
+
+
+				var feedbackMessage = new FeedbackMessage
                 {
                     UserId = userId,
                     Origin = feedbackMessageRequest.Origin,
                     Message = feedbackMessageRequest.Message,
-                    UserAgent = "userAgent"
+                    UserAgent = _httpContext.Request.Headers.UserAgent,
                 };
 
                 if (errors.Count == 0)

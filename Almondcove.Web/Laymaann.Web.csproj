@@ -49,8 +49,6 @@
 
 	<ItemGroup>
 		<Folder Include="Logs\" />
-		<Folder Include="wwwroot\assets\scripts\" />
-		<Folder Include="wwwroot\assets\styles\" />
 		<Folder Include="wwwroot\content\music\album\recuerdos-1\assets\" />
 		<Folder Include="wwwroot\content\music\album\recuerdos-1\parallax_cover\" />
 		<Folder Include="wwwroot\scripts\dedicated\account\" />

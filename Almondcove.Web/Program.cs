@@ -32,6 +32,7 @@ else
 	builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 }
 
+builder.Services.AddHttpContextAccessor();
 var rateLimitingOptions = new RateLimitingOptions();
 builder.Configuration.GetSection("RateLimiting").Bind(rateLimitingOptions);
 
