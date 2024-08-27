@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Laymaann.Entities.ViewModels.Props
+﻿namespace Laymaann.Entities.ViewModels.Props
 {
     public class MetaProps
     {
@@ -19,7 +13,7 @@ namespace Laymaann.Entities.ViewModels.Props
         public MetaProps()
         {
             Title = "Laymaann";
-            Description = "A webspace for blogs , apps, music and resources";
+            Description = "Laymaann, the wandering lens, seeks to unveil the hidden narratives woven into the fabric of our everyday existence. In the bustling tapestry of life, where actions flow effortlessly from the subconscious, Laymaann's camera becomes a portal to the overlooked, the unnoticed, and the unseen. With each click, Laymaann invites us to pause, to ponder, and to appreciate the intricate history etched into the roads we tread, the faces we pass, and the moments we inhabit. Through the lens of Laymaann, ordinary becomes extraordinary, and the stories of humanity unfold in vivid detail, capturing the essence of life in its purest form.";
             Tags = "Laymaann, photography,portfolio,apps,blogs,lightroom,presets";
             Image = "https://laymaann.in/assets/meta/banner.jpg";
             Url = "https://laymaann.in";

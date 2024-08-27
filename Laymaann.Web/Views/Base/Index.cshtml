@@ -7,9 +7,9 @@
 
     MetaProps meta = new()
             {
-                Title = "AlmondCove - a digital webspace by Jass",
-                Description = "A dynamic webspace for blogs, gallery, apps, web resources and much more",
-                Author = "Jasmeet Singh"
+                Title = "Laymaann",
+                Description = "Laymaann, the wandering lens, seeks to unveil the hidden narratives woven into the fabric of our everyday existence. In the bustling tapestry of life, where actions flow effortlessly from the subconscious, Laymaann's camera becomes a portal to the overlooked, the unnoticed, and the unseen. With each click, Laymaann invites us to pause, to ponder, and to appreciate the intricate history etched into the roads we tread, the faces we pass, and the moments we inhabit. Through the lens of Laymaann, ordinary becomes extraordinary, and the stories of humanity unfold in vivid detail, capturing the essence of life in its purest form.",
+                Author = "Laymaann"
             };
 
     ViewData["HtmlProps"] = props;
@@ -54,9 +54,9 @@
 								</div>
 								<div class="d-flex align-items-center">
 									<img class="rounded-circle" src="/assets/images/home/avatar.jpg" width="35" alt="Avatar" />
-									<div class="fs-xs ps-2" data-bs-theme="light">
-										<span class="text-nav fw-bold me-1">laymaann</span>
-										<span class="text-body-secondary">12 min</span>
+									<div class="fs-xs ps-2">
+										<span class="text-nav fw-bold me-1 text-body-secondary" style="color: #ffffffe3 !important;">laymaann</span>
+										<span class="text-body-secondary" style="color: #ffffffe3 !important;">12 min</span>
 									</div>
 								</div>
 							</div>
@@ -90,7 +90,7 @@
 					<p class="mb-3 mx-3" data-aos="fade" data-aos-duration="500" data-aos-offset="0" data-aos-once="true">I don't feel particularly proud of myself. But when I walk alone in the woods or lie in the meadows, all is well.</p>
 				</div>
 				<div class="d-sm-flex justify-content-center justify-content-lg-start mt-lg-2">
-					<a class="btn btn-lg btn-primary w-100 w-sm-auto mb-2 mb-sm-0 me-sm-1" routerLink="/about">About</a>
+					<a class="btn btn-lg btn-primary w-100 w-sm-auto mb-2 mb-sm-0 me-sm-1" href="/about">About</a>
 					<a class="btn btn-lg btn-link" routerLink="/about/contact">
 						Get in touch
 						<i class="ai-arrow-right ms-2"></i>
@@ -100,6 +100,109 @@
 			</div>
 	</div>
 </section>
+
+      <!-- Collections (Binded slider) -->
+@*       <section class="position-relative py-5">
+        <div class="binded-content position-absolute top-0 start-0 w-100">
+          <div class="binded-item position-absolute top-0 start-0 w-100 h-100 bg-size-cover bg-position-center active" id="bg-1" style="background: linear-gradient(270deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url(assets/img/landing/shop-1/collections/bg01.jpg);"></div>
+          <div class="binded-item position-absolute top-0 start-0 w-100 h-100 bg-size-cover bg-position-center" id="bg-2" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.5) -0.47%, rgba(0,0,0,0) 100%), url(assets/img/landing/shop-1/collections/bg02.jpg);"></div>
+        </div>
+        <div class="container py-2 py-sm-4 py-lg-5 my-md-3 my-lg-0 my-xl-3 my-xxl-4">
+          <div class="row align-items-center my-xxl-2">
+            <div class="col-md-6 position-relative z-2 mb-5 mb-md-0">
+              <div style="max-width: 580px;">
+
+                <!-- Swiper controls (Prev/next buttons) -->
+                <div class="d-flex pb-2 mb-3 mb-md-4 mb-xl-5">
+                  <button class="btn btn-icon btn-sm btn-outline-light rounded-circle me-3" type="button" id="prev-collection" aria-label="Prev">
+                    <i class="ai-arrow-left"></i>
+                  </button>
+                  <button class="btn btn-icon btn-sm btn-outline-light rounded-circle" type="button" id="next-collection" aria-label="Next">
+                    <i class="ai-arrow-right"></i>
+                  </button>
+                </div>
+
+                <!-- Swiper slider -->
+                <div class="swiper" data-swiper-options='{
+                  "spaceBetween": 40,
+                  "loop": true,
+                  "bindedContent": true,
+                  "controlledSlider": "#cards",
+                  "navigation": {
+                    "prevEl": "#prev-collection",
+                    "nextEl": "#next-collection"
+                  }
+                }'>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-swiper-binded="#bg-1">
+                      <h2 class="display-5 text-white text-uppercase pb-2 mb-md-4 mb-xl-5">Meet the guests with a stunning set for a dinner party</h2>
+                      <a class="btn btn-outline-light" href="shop-catalog.html">Explore all sets</a>
+                    </div>
+                    <div class="swiper-slide" data-swiper-binded="#bg-2">
+                      <h2 class="display-5 text-white text-uppercase pb-2 mb-md-4 mb-xl-5">Decor for the living room or bedrooms in wood style</h2>
+                      <a class="btn btn-outline-light" href="shop-catalog.html">Explore all sets</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
+              <div class="ps-md-4 ps-lg-0">
+                <div class="card border-0 rounded-1" style="max-width: 450px;">
+                  <div class="card-body">
+
+                    <!-- Controlled swiper slider -->
+                    <div class="swiper" id="cards" data-swiper-options='{
+                      "allowTouchMove": false,
+                      "spaceBetween": 40,
+                      "loop": true
+                    }'>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a class="d-block pb-3 mb-2 mb-lg-3" href="shop-single.html">
+                            <img src="assets/img/landing/shop-1/collections/th01.png" alt="Collection">
+                          </a>
+                          <div class="d-flex mb-1">
+                            <h3 class="h6 mb-0">
+                              <a href="shop-single.html">Set for a dinner party of 7 items</a>
+                            </h3>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="me-2">$116.00</span>
+                            <div class="nav ms-auto" data-bs-toggle="tooltip" data-bs-template='<div class="tooltip fs-xs" role="tooltip"><div class="tooltip-inner bg-light text-body-secondary p-0"></div></div>' data-bs-placement="left" title="Add to cart">
+                              <a class="nav-link fs-lg py-2 px-1" href="#" aria-label="Add to Cart">
+                                <i class="ai-cart"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="d-block pb-3 mb-2 mb-lg-3" href="shop-single.html">
+                            <img src="assets/img/landing/shop-1/collections/th02.png" alt="Collection">
+                          </a>
+                          <div class="d-flex mb-1">
+                            <h3 class="h6 mb-0">
+                              <a href="shop-single.html">A set of flowerpots for the living room</a>
+                            </h3>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="me-2">$78.00</span>
+                            <div class="nav ms-auto" data-bs-toggle="tooltip" data-bs-template='<div class="tooltip fs-xs" role="tooltip"><div class="tooltip-inner bg-light text-body-secondary p-0"></div></div>' data-bs-placement="left" title="Add to cart">
+                              <a class="nav-link fs-lg py-2 px-1" href="#" aria-label="Add to Cart">
+                                <i class="ai-cart"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> *@
 
 @* <section class="container pt-5 pb-4 mb-2 my-lg-3 my-xl-4 my-xxl-5"> 
   <div
